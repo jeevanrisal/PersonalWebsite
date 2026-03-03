@@ -1,32 +1,88 @@
-# Jeevan Portfolio
+# Jeevan Risal Portfolio
 
-This is a Next.js 15 portfolio site.
+Modern personal portfolio built with Next.js 15, React 19, and Tailwind CSS.
+It includes sections for projects, experience, education, and contact details with a polished interactive UI.
 
-## Run locally
+## Tech stack
+
+- Next.js 15 (App Router)
+- React 19
+- Tailwind CSS 3
+- Geist font
+- Lucide icons
+
+## Features
+
+- Single-page portfolio flow: Hero, Strengths, Projects, Experience, Education, Contact
+- Data-driven content from one central file (`data/siteData.js`)
+- Smooth UI details (pointer effects, magnetic interactions, section transitions)
+- Responsive layout for desktop and mobile
+- Production-ready static build output
+
+## Project structure
+
+```text
+app/
+  layout.jsx
+  page.jsx
+  globals.css
+components/
+  Hero.jsx
+  Projects.jsx
+  Experience.jsx
+  Education.jsx
+  Contact.jsx
+  ...
+data/
+  siteData.js
+hooks/
+  useMagnetic.js
+```
+
+## Getting started
+
+### 1) Install dependencies
 
 ```bash
 npm install
+```
+
+### 2) Start local development server
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000)
 
-## Host it online (Recommended: Vercel)
+## Available scripts
 
-### Option 1: Deploy from GitHub (easiest)
+- `npm run dev` - Start development server
+- `npm run build` - Create production build
+- `npm run start` - Run production server locally
+- `npm run lint` - Run ESLint checks
 
-1. Create a new GitHub repo and push this project.
-2. Go to [https://vercel.com/new](https://vercel.com/new).
-3. Import your GitHub repo.
-4. If prompted, set these:
+## Customize content
+
+Most portfolio content can be updated in:
+
+- `data/siteData.js` - social links, projects, experience, education
+- `app/layout.jsx` - page metadata (title + description)
+- `app/globals.css` - theme, effects, and global styling
+
+## Deployment (Vercel)
+
+### Option A: Deploy from GitHub
+
+1. Push this repository to GitHub.
+2. Open [Vercel New Project](https://vercel.com/new).
+3. Import the repository.
+4. Confirm:
    - Framework Preset: `Next.js`
    - Build Command: `npm run build`
-   - Output Directory: leave default
-5. Click **Deploy**.
+5. Deploy.
 
-Your website will get a live URL like `https://your-site.vercel.app`.
-
-### Option 2: Deploy with CLI
+### Option B: Deploy with Vercel CLI
 
 ```bash
 npm i -g vercel
@@ -34,18 +90,12 @@ vercel
 vercel --prod
 ```
 
-## Important note for this machine
+## Notes
 
-Your local environment has another `package-lock.json` higher in the folder tree (`/Users/jeevanrisal/package-lock.json`), so Next.js prints a warning locally.
+- If Next.js warns about multiple lockfiles on your machine, it is usually due to another `package-lock.json` outside this project directory.
+- For hosting, always set the project root to this folder:
+  `/Users/jeevanrisal/Documents/Projects/Personal Final`
 
-This does **not** block deployment. To avoid confusion in hosted builds, make sure your deploy root is this folder:
+## License
 
-`/Users/jeevanrisal/Documents/Projects/Personal Final`
-
-## Custom domain (optional)
-
-In Vercel:
-
-1. Open your project.
-2. Go to **Settings -> Domains**.
-3. Add your domain and follow DNS instructions.
+Personal project. Update license terms as needed before public redistribution.
